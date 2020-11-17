@@ -1,25 +1,35 @@
-
-.App > div {
-
-}
 .inputs {
   padding: 20px;
   display: inline-flex;
 }
 .commit {
-  margin: 2px;
-  width: 20px;
-  height: 20px;
-  background-color: rgb(224, 224, 224);
-  font-size: smaller;
+  margin: 1px;
+  width: 15px;
+  height: 15px;
+  background-color: #EBEDF0;
+  font-size: x-small;
+  border-radius: 3px;
+  color: rgb(46, 45, 45);
+  user-select: none;
 }
 
-.commit:hover {
-  background-color: #237036;
-  transition: 0.15s ease-in-out;
-}
+/* .commit:hover { */
+  /* border: 2px solid rgb(14, 104, 84); */
+  /* color: rgb(32, 32, 32); */
+/* } */
 
 .cols {
   display: inline-block;
   vertical-align: top;
+}
+
+.errorMsg {
+  color: rgb(204, 88, 88);
+  animation: fadeout 2s infinite;
+}
+
+@keyframes fadeout {
+  0%   {opacity:1;}
+  50%  {opacity:0.5;}
+  100% {opacity:1;}
 }

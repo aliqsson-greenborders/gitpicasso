@@ -1,5 +1,7 @@
 * {
   box-sizing: border-box;
+  /* transition: 0.15s ease-in-out; */
+
 }
 body {
   text-align: center;

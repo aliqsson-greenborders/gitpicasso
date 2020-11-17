@@ -10,7 +10,7 @@ class YearSelector extends React.Component {
     }
 
     componentDidMount() {
-        this.sendYear = debounce(this.sendYear, 300);
+        // this.sendYear = debounce(this.sendYear, 300);
     }
 
     sendYear = (year) => {
@@ -18,13 +18,16 @@ class YearSelector extends React.Component {
     }
 
     handleChange = (e) => {
-        this.sendYear(e.target.value);
+        let year = parseInt(e.target.value);
+        year = year < 0 ? 0 : year
+        this.sendYear(year);
     }
 
     render() {
         return (
             <div className="yearSelector">
                 <TextField
+                    value = {this.props.year}
                     onChange={this.handleChange}
                     id="standard-textarea"
                     label="Enter Year"
