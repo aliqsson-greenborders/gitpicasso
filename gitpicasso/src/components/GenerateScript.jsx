@@ -35,10 +35,7 @@ function handleSubmit(commits, repo, github) {
             scriptLines.push(scriptLine)
         }
     }
-    // scriptLines.push('git branch -M main\n')
-    scriptLines.push(`git remote add origin git@github.com:${github}/${repo}.git\n`)
-    // scriptLines.push('git branch -M main\n')
-    scriptLines.push('git fetch\n')
+    scriptLines.push(`git remote add origin git@github.com:${github}/$REPO.git\n`)
     scriptLines.push(`git pull origin master \n`)
     scriptLines.push('git push -u origin master\n')
 
