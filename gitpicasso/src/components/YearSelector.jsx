@@ -7,6 +7,9 @@ class YearSelector extends React.Component {
 
     constructor(props) {
         super(props)
+        this.state = {
+             currentYear: new Date().getFullYear()
+        }
     }
 
     componentDidMount() {
@@ -20,6 +23,7 @@ class YearSelector extends React.Component {
     handleChange = (e) => {
         let year = parseInt(e.target.value);
         year = year < 0 ? 0 : year
+        year = (year > this.state.currentYear) ? this.state.currentYear : year;
         this.sendYear(year);
     }
 

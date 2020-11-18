@@ -1,13 +1,23 @@
-import React from 'react' 
+import React from 'react'
 
 const TextFile = (ar) => {
     const element = document.createElement("a");
-    const file = new Blob(ar, {type: 'text/plain'});
+    const file = new Blob(ar, { type: 'text/plain' });
     element.href = URL.createObjectURL(file);
     element.download = "gitpicasso.sh";
     document.body.appendChild(element); // Required for this to work in FireFox
     element.click();
-  }
+}
+
+
+    const checkGithub = async (username, repo) => {
+        const response = await fetch(`https://github.com/${username}/${repo}`)
+        const status = response.status === 200 ? true : false;
+        //return false if the github credentials invalid
+        console.log('status', status)
+        return status
+    }
+
 
 function handleSubmit(commits, repo, github) {
     const scriptLines = [];
@@ -22,15 +32,12 @@ function handleSubmit(commits, repo, github) {
     scriptLines.push(`git add ${gitStr}\n`)
 
     //get commits key
-        //convert extract only date part
-        //no need id's already render what we need
+    //convert extract only date part
+    //no need id's already render what we need
     //read the count
     //run for loop for each count
-
-    console.log('commits', commits)
-    
-    for(let date in commits) {
-        for (let i=0; i<commits[date].count; i++) {
+    for (let date in commits) {
+        for (let i = 0; i < commits[date].count; i++) {
             let scriptLine = `GIT_AUTHOR_DATE=${date}T12:00:00 GIT_COMMITTER_DATE=${date}T12:00:00 git commit --allow-empty -m "${gitStr}" > /dev/null\n`
             scriptLines.push(scriptLine)
         }
@@ -52,16 +59,27 @@ function handleSubmit(commits, repo, github) {
 2020-06-16-commit: {count: 3, color: "#216E39"}
 */
 
+
 function GenerateScript(props) {
 
-    const {commits, repo, github} = props;
+    const { commits, repo, github } = props;
+
     if (!commits || !repo || !github) {
-        return <h4 className='errorMsg'>Please fill all the fields</h4>
+        return (
+            <div>
+                <h4 className='errorMsg'>Please fill all the fields</h4>
+            </div>
+
+        )
     }
     return (
-        <button onClick={
-            ()=>handleSubmit(commits, repo, github)
-        }>Generate the Script</button>
+        <div>
+            <button onClick={
+                () => handleSubmit(commits, repo, github)
+            }>Generate the Script</button>
+
+        </div>
+
     )
 }
 

@@ -35,6 +35,10 @@ class App extends React.Component {
     }
   }
 
+  componentDidMount() {
+    
+  }
+
   getColorGroup = (commitsCount) => {
     const { maxCommits, colorValues } = this.state;
     const percent = (!commitsCount) ? 0 : (commitsCount / maxCommits) * 100;
