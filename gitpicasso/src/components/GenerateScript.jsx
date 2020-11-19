@@ -43,7 +43,7 @@ function handleSubmit(commits, repo, github) {
         }
     }
     scriptLines.push(`git remote add origin git@github.com:${github}/$REPO.git\n`)
-    scriptLines.push(`git pull origin master \n`)
+    scriptLines.push(`git pull origin master --allow-unrelated-histories\n`)
     scriptLines.push('git push -u origin master\n')
 
 
