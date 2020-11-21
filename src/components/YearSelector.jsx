@@ -22,7 +22,7 @@ class YearSelector extends React.Component {
 
     handleChange = (e) => {
         let year = parseInt(e.target.value);
-        year = year < 0 ? 0 : year
+        year = year < 1900 ? 1900 : year
         year = (year > this.state.currentYear) ? this.state.currentYear : year;
         this.sendYear(year);
     }
