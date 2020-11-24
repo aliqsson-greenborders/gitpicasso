@@ -74,7 +74,7 @@ function GenerateScript(props) {
     }
     return (
         <div>
-            <button onClick={
+            <button className="generate-btn" onClick={
                 () => handleSubmit(commits, repo, github)
             }>Generate the Script</button>
 

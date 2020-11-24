@@ -1,6 +1,8 @@
 import React from 'react' 
 import TextField from '@material-ui/core/TextField'
 import debounce from 'lodash/debounce'
+import { makeStyles } from '@material-ui/core/styles';
+
 
 export default class UserNameInput extends React.Component {
 
@@ -27,11 +29,14 @@ export default class UserNameInput extends React.Component {
         const {text} = this.state;
         return (
             <TextField
+                selected classes={{ root: 'MenuItem', selected: 'selected' }}
                 onChange={this.handleChange}
                 id="standard-textarea"
                 // value={text}
                 label='Github'
-                helperText="Enter your GitHub username"
+                autoFocus="true"
+                color="primary"
+                shrink="true"
             />
         )
     }

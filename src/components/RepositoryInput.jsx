@@ -28,7 +28,6 @@ export default class RepositoryInput extends React.Component {
                 onChange={this.handleChange}
                 id="standard-textarea"
                 label="Repo Name"
-                helperText="Enter a new repository name"
             />
         )
     }

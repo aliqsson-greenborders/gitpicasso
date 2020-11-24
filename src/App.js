@@ -101,7 +101,7 @@ class App extends React.Component {
           <YearSelector year={year} changeState={this.changeState} />
           <RepositoryInput repo={repo} changeState={this.changeState} />
         </div>
-        <div>
+        <div className="commits-board">
           <CommitsBoard
             handleClick={this.handleClick}
             commits={commits}

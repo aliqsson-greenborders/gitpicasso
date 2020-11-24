@@ -35,7 +35,6 @@ class YearSelector extends React.Component {
                     onChange={this.handleChange}
                     id="standard-textarea"
                     label="Enter Year"
-                    helperText="Enter the year you want to populate"
                     type="number"
                 />
             </div>
