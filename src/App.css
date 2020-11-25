@@ -1,4 +1,5 @@
 .App {
+  height: 100vh;
 
   /* text-align: center; */
 }
@@ -22,28 +23,28 @@ input, label{
 .inputs {
   /* Gradient */
 
-
-  padding: 20px;
+  background: rgb(46, 45, 45) !important;
+  padding: 5px;
   display: block;
+  width: 300px;
+  margin: auto;
 }
 
 .commits-board {
   display:inline-block;
-  width:90vw;
   padding: 10px;
   /* margin:10px; */
-  background: rgb(2,0,36);
-background: linear-gradient(180deg, rgb(172, 178, 179) 0%, rgba(67, 136, 136, 0.423) 98%, rgba(95, 228, 255, 0.377) 100%);
-border-radius: 5px;
+  /* background: rgb(84, 86, 87); */
+/* border-radius: 0px 5px; */
 }
 .commit {
   margin: 1px;
   width: 15px;
   height: 15px;
-  background-color: #ebedf04b;
   font-size: x-small;
+  border: 1px solid rgba(104, 104, 104, 0.589);
   border-radius: 3px;
-  color: rgb(160, 201, 224);
+  color: rgba(34, 35, 36, 0.616);
   user-select: none;
 }
 
@@ -68,7 +69,7 @@ border-radius: 5px;
   100% {opacity:1;}
 }
 
-.generate-btn, .inputs input {
+.inputs input {
     margin-bottom: 1rem;
     color: rgba(221, 216, 216, 0.7);
     border-color: rgba(255, 255, 255, 0.863);
@@ -77,10 +78,6 @@ border-radius: 5px;
     border-radius: 0.3rem;
     transition: color 0.2s, background-color 0.2s, border-color 0.2s
 
-}
-
-.generate-btn {
-  color: rgb(34, 33, 33);
 }
 
 .generate-btn:hover {
@@ -92,5 +89,30 @@ border-radius: 5px;
 
 .generate-btn {
   animation: fadeout 2s infinite;
+  color: rgb(37, 37, 37);
+  background-color: rgba(52, 163, 207, 0.993);
+  margin-bottom: 10px;
 
+}
+
+footer {
+  color: rgba(221, 216, 216, 0.7);
+  width: 300px;
+  margin: auto;
+  padding: 10px;
+  background: rgb(46, 45, 45) !important;
+}
+
+nav ul li, a{
+  display: inline-block;
+  margin: 0 10px;
+  color: rgb(39, 37, 37);
+  padding: 10px;
+  text-decoration: none;
+
+}
+
+nav ul li:hover {
+  transition: 0.15s ease-in-out;
+  background-color: rgba(124, 158, 124, 0.247);
 }

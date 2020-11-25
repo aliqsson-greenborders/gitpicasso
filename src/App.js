@@ -6,6 +6,7 @@ import RepositoryInput from './components/RepositoryInput'
 import './App.css';
 import CommitsBoard from './components/CommitsBoard'
 import GenerateScript from './components/GenerateScript'
+import Navigation from './components/Navigation'
 
 
 class App extends React.Component {
@@ -36,7 +37,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    
+
   }
 
   getColorGroup = (commitsCount) => {
@@ -95,6 +96,9 @@ class App extends React.Component {
       commits, maxCommits, inputCompleted, allowDrawOnMouseOver } = this.state;
     return (
       <div className="App">
+        <Navigation />
+
+        <h1>Turn your GitHub into an Artboard</h1>
 
         <div className="inputs" disabled>
           <UsernameInput github={github} changeState={this.changeState} />
@@ -110,20 +114,22 @@ class App extends React.Component {
           />
         </div>
         <div>
-            <input type="checkbox" value="checkbox" name="allowmouseover"
-              onChange={() => {
-                const { allowDrawOnMouseOver } = this.state;
-                this.setState({ allowDrawOnMouseOver: !allowDrawOnMouseOver })
-              }} />
-            <label for="allowmouseover">Draw on MouseOver</label>
-          </div>
-          <br/>
-          <div>
-            <GenerateScript commits={commits} github={github} repo={repo}/>
-          </div>
-        
-          <h3>Current maxCommits: {maxCommits}</h3>
-          <h3>Max commits allowed: 10</h3>
+          <input type="checkbox" value="checkbox" name="allowmouseover"
+            onChange={() => {
+              const { allowDrawOnMouseOver } = this.state;
+              this.setState({ allowDrawOnMouseOver: !allowDrawOnMouseOver })
+            }} />
+          <label for="allowmouseover">Draw on MouseOver</label>
+        </div>
+        <br />
+        <div>
+          <GenerateScript commits={commits} github={github} repo={repo} />
+        </div>
+        <footer>
+            <h3>Current maxCommits: {maxCommits}</h3>
+            <h3>Max commits allowed: 10</h3>
+        </footer>
+
       </div>
     );
   }
