@@ -66,9 +66,9 @@ function GenerateScript(props) {
 
     if (!commits || !repo || !github) {
         return (
-            <div>
-                <h4 className='errorMsg'>Please fill all the fields</h4>
-            </div>
+            <div class="window-body" className="errorMsg">
+                <h4>Please fill out all the fields</h4>
+          </div>
 
         )
     }

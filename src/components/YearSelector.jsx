@@ -29,12 +29,15 @@ class YearSelector extends React.Component {
 
     render() {
         return (
-            <div className="yearSelector">
-                <TextField
+            <div className="field-row-stacked">
+                <label for="text21">Select a year</label>
+                <input 
+                    id="text21"
+                    className="standard-input"
                     value = {this.props.year}
                     onChange={this.handleChange}
-                    id="standard-textarea"
                     label="Enter Year"
+                    placeholder="Enter Year"
                     type="number"
                 />
             </div>

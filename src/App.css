@@ -1,34 +1,63 @@
 .App {
+  height: 100%;
+  margin:0;
+  /* overflow: hidden; */
+  /* min-width:320px; */
 
   /* text-align: center; */
 }
+.inputs {
+    /* display:inline-block; */
+    max-width: 400px;
+}
 
 input, label{
-  padding-left:10px !important;
+  /* padding-left:10px !important; */
   /* color: rgba(255, 255, 255, 0.822) !important; */
+}
+
+.taskbar {
+  background-image: url('images/xptaskbar.gif');
+  background-repeat: repeat-x;
+  height:30px;
+  position: fixed;
+  bottom: 0%;
+  width: 100%;
+}
+
+.start {
+  background-color: #1F72DE ;
+  background-image: url(images/startbottom.gif);
+  background-repeat: no-repeat;
+  height: 42px;
+  width: 42px;
+  cursor: default;
+}
+
+
+input {
+  max-width: 400px;
+  margin:auto;
 }
 
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: white;
-  opacity: 1; /* Firefox */
+  /* color: white; */
+  /* opacity: 1; Firefox */
 }
 
 #standard-textarea {
-  text-align: center;
-  width: 200px;
+
 }
 
 .inputs {
-  /* Gradient */
+  width:50%;
+  margin:auto;
 
-  background: rgb(46, 45, 45) !important;
-  padding: 5px;
-  display: block;
-  margin: auto;
 }
 
 .commits-board {
+  width:100%;
   display:inline-block;
   padding: 10px;
   /* margin:10px; */
@@ -45,11 +74,6 @@ input, label{
   color: rgba(34, 35, 36, 0.616);
   user-select: none;
 }
-
-/* .commit:hover { */
-  /* border: 2px solid rgb(14, 104, 84); */
-  /* color: rgb(32, 32, 32); */
-/* } */
 
 .cols {
   display: inline-block;
@@ -68,13 +92,6 @@ input, label{
 }
 
 .inputs input {
-    margin-bottom: 1rem;
-    /* color: rgba(221, 216, 216, 0.7); */
-    border-color: rgba(255, 255, 255, 0.863);
-    border-style: solid;
-    border-width: 1px;
-    border-radius: 0.3rem;
-    transition: color 0.2s, background-color 0.2s, border-color 0.2s
 
 }
 
@@ -94,8 +111,8 @@ input, label{
 }
 
 footer {
-  color: rgba(221, 216, 216, 0.7);
-  background: rgb(46, 45, 45) !important;
+  /* color: rgba(221, 216, 216, 0.7); */
+  /* background: rgb(46, 45, 45) !important; */
 }
 
 nav ul li, a{

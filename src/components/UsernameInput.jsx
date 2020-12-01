@@ -1,4 +1,4 @@
-import React from 'react' 
+import React from 'react'
 import TextField from '@material-ui/core/TextField'
 import debounce from 'lodash/debounce'
 import { makeStyles } from '@material-ui/core/styles';
@@ -26,18 +26,23 @@ export default class UserNameInput extends React.Component {
     }
 
     render() {
-        const {text} = this.state;
+        const { text } = this.state;
         return (
-            <TextField
-                selected classes={{ root: 'MenuItem', selected: 'selected' }}
-                onChange={this.handleChange}
-                id="standard-textarea"
-                // value={text}
-                label='Github'
-                autoFocus="true"
-                color="primary"
-                shrink="true"
-            />
+            <div className="field-row-stacked">
+                <label for="text22">GitHub username</label>
+                <input
+                    id="text22"
+                    className="standard-input"
+                    onChange={this.handleChange}
+                    value={text}
+                    placeholder="Github"
+                    label='Github'
+                    autoFocus="true"
+                // color="primary"
+                // shrink="true"
+                />
+            </div>
+
         )
     }
 }
