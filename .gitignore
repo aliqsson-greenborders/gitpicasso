@@ -40,6 +40,13 @@ build/Release
 
 # Dependency directories
 node_modules/
+public/
+src/
+README.md
+package.json
+package-lock.json
+LICENSE
+about-project.txt
 jspm_packages/
 
 # TypeScript v1 declaration files
