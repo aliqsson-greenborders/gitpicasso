@@ -7,12 +7,12 @@ import "./App.css";
 import CommitsBoard from "./components/CommitsBoard";
 import GenerateScript from "./components/GenerateScript";
 import Navigation from "./components/Navigation";
-import Taskbar from './components/Taskbar'
-import ReactDOM, {findDomNode, unmountComponentAtNode} from 'react-dom'
+import Taskbar from "./components/Taskbar";
+import ReactDOM, { findDomNode, unmountComponentAtNode } from "react-dom";
 
 const maximizedStyle = {
   position: "fixed",
-  top : "0",
+  top: "0",
   left: "0",
   width: "100vw",
   height: "100vh",
@@ -21,10 +21,10 @@ const maximizedStyle = {
 
 const normalStyle = {
   position: "static",
-  height:"auto",
-  width:"80%",
-  margin: "auto 5%",
-}
+  height: "auto",
+  width: "80%",
+  margin:"auto"
+};
 
 class App extends React.Component {
   constructor() {
@@ -115,14 +115,18 @@ class App extends React.Component {
   };
 
   maximize = () => {
-    const {toggle} = this.state;
-    toggle ? this.setState({currentStyle: normalStyle, toggle:!this.state.toggle}) :
-    this.setState({currentStyle: maximizedStyle, toggle:!this.state.toggle})
-  } 
+    const { toggle } = this.state;
+    toggle
+      ? this.setState({ currentStyle: normalStyle, toggle: !this.state.toggle })
+      : this.setState({
+          currentStyle: maximizedStyle,
+          toggle: !this.state.toggle,
+        });
+  };
 
   close = () => {
-    document.querySelector('.window').style.display = "none"
-  }
+    document.querySelector(".window").style.display = "none";
+  };
   render() {
     const {
       github,
@@ -132,7 +136,7 @@ class App extends React.Component {
       maxCommits,
       inputCompleted,
       allowDrawOnMouseOver,
-      currentStyle
+      currentStyle,
     } = this.state;
     return (
       <div className="App">
@@ -179,18 +183,19 @@ class App extends React.Component {
               <div>
                 <GenerateScript commits={commits} github={github} repo={repo} />{" "}
               </div>{" "}
-              <footer>
-              <pre>Microsoft&#10094;R&#10095; Windows DOS 
-                    &#10094;C&#10095; Copyright Microsoft Corp 1990-2001.
-                    <br/>C:&#92;WINDOWS&#92;SYSTEM32> You can build a command line easily with a window and pre tag
-                    </pre>
+              <footer className='pre'>
+                  Microsoft&#10094;R&#10095; Windows DOS &#10094;C&#10095;
+                  Copyright Microsoft Corp 1990-2001.
+                  <br />
+                  C:&#92;WINDOWS&#92;SYSTEM32> You can build a command line
+                  easily with a window and pre tag
               </footer>
             </div>{" "}
           </div>
 
           <br />
         </div>
-        <Taskbar/>
+        <Taskbar />
       </div>
     );
   }

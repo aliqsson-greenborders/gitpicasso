@@ -1,6 +1,5 @@
 .App {
   height: 100%;
-  margin:0;
   /* overflow: hidden; */
   /* min-width:320px; */
 
@@ -17,12 +16,12 @@ input, label{
 }
 
 .taskbar {
+  width:100%;
   background-image: url('images/xptaskbar.gif');
   background-repeat: repeat-x;
   height:30px;
   position: fixed;
   bottom: 0%;
-  width: 100%;
 }
 
 .start {
@@ -31,6 +30,8 @@ input, label{
   background-repeat: no-repeat;
   height: 42px;
   width: 42px;
+  position:fixed;
+  left:0;
   cursor: default;
 }
 

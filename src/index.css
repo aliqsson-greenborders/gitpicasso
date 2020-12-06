@@ -4,10 +4,13 @@
 
 }
 body {
-  background: url('./images/background.png');
+  margin:0;
+    font-family: Arial;
+  font-size: 12px;
+  color: #222;
+  background: url('./images/background.jpg');
   /* background: rgb(221, 221, 221); */
   text-align: center;
-  margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -42,12 +45,6 @@ code {
   /* src: url(PerfectDOSVGA437Win.woff2) format("woff2"), url(PerfectDOSVGA437Win.woff) format("woff"); */
   font-weight: 400;
   font-style: normal
-}
-
-body {
-  font-family: Arial;
-  font-size: 12px;
-  color: #222
 }
 
 .surface {
@@ -88,7 +85,8 @@ code * {
   font-family: monospace
 }
 
-pre {
+.pre {
+  text-align:left;
   display: block;
   padding: 12px 8px;
   background-color: #000;
@@ -97,8 +95,8 @@ pre {
   margin: 0
 }
 
-pre,
-pre * {
+.pre,
+.pre * {
   font-family: Perfect DOS VGA\ 437 Win
 }
 
@@ -449,14 +447,12 @@ input[type=range].has-box-indicator::-moz-range-thumb {
 }
 
 .window {
+  min-width:480px;
   height:auto;
   width:80%;
-  margin:auto 5%;
-  position: absolute;
   font-size: 11px;
   box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #dfdfdf, inset -2px -2px grey, inset 2px 2px #fff;
   background: #ece9d8;
-  padding: 3px
 }
 
 .window fieldset {
