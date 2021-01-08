@@ -9,6 +9,7 @@ import GenerateScript from "./components/GenerateScript";
 import Navigation from "./components/Navigation";
 import Taskbar from "./components/Taskbar";
 import ReactDOM, { findDomNode, unmountComponentAtNode } from "react-dom";
+import TwitterFetch from "./components/TwitterFetch";
 
 const maximizedStyle = {
   position: "fixed",
@@ -189,6 +190,7 @@ class App extends React.Component {
                   <br />
                   C:&#92;WINDOWS&#92;SYSTEM32> You can build a command line
                   easily with a window and pre tag
+                  <TwitterFetch />
               </footer>
             </div>{" "}
           </div>
