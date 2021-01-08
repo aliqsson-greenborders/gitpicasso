@@ -24,7 +24,7 @@ const normalStyle = {
   position: "static",
   height: "auto",
   width: "80%",
-  margin:"auto"
+  margin: "auto",
 };
 
 class App extends React.Component {
@@ -184,13 +184,12 @@ class App extends React.Component {
               <div>
                 <GenerateScript commits={commits} github={github} repo={repo} />{" "}
               </div>{" "}
-              <footer className='pre'>
-                  Microsoft&#10094;R&#10095; Windows DOS &#10094;C&#10095;
-                  Copyright Microsoft Corp 1990-2001.
-                  <br />
-                  C:&#92;WINDOWS&#92;SYSTEM32> You can build a command line
-                  easily with a window and pre tag
-                  <TwitterFetch />
+              <footer className="pre">
+                Microsoft&#10094;R&#10095; Windows DOS &#10094;C&#10095;
+                Copyright Microsoft Corp 1990-2001.
+                <br />
+                C:&#92;WINDOWS&#92;SYSTEM32> You can build a command line easily
+                with a window and pre tag
               </footer>
             </div>{" "}
           </div>
