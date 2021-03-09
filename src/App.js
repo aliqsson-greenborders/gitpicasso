@@ -9,7 +9,6 @@ import GenerateScript from "./components/GenerateScript";
 import Navigation from "./components/Navigation";
 import Taskbar from "./components/Taskbar";
 import ReactDOM, { findDomNode, unmountComponentAtNode } from "react-dom";
-import TwitterFetch from "./components/TwitterFetch";
 
 const maximizedStyle = {
   position: "fixed",
